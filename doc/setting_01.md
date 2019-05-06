@@ -1,6 +1,5 @@
 # Python install
 python Mac환경에서 Setting 하기 
-
 iterm +zsh +  hombrew
 
 homebrew가 없다면 설치합시다 
@@ -12,7 +11,7 @@ homebrew가 없다면 설치합시다
 - `brew install pip3`
 
 최신 버전으로 설치가 될 것입니다. 지금 기준으로 python3.7 
-3.6(권장) 3.7은 아직 다른 라이브러리들이 충될 되는 경우가 종종 있음
+3.6(권장) 3.7은 아직 다른 라이브러리들이 충돌 되는 경우가 종종 있음
 
 설치하고 python3을 실행시켜 보았습니다.
 
@@ -127,6 +126,16 @@ python manage.py migrate
 
 
 
+project (프로젝트 폴더)
+settings.py: 각종 설정 파일 
+urls.py: 웹 페이지 주소를 어디다 연결 시킬지 
+wsgi.py: 실행 프로세스와 관련된 파일 
+app (웹 앱 폴더)
+admin.py: 쟝고 관리자 웹 구성 파일
+apps.py: 쟝고 웹앱에 대한 설정 파일
+models.py: db model 정의 파일
+views.py: 페이지와 요청을 나타내는 파일 
+
 ```
 
 ### migrate 
@@ -141,6 +150,9 @@ database 변화가 일어날 떄 마다
 ### super user 생성 
 
 `python manage.py createsuperuser --email dali@example.com --username dali`
+
+
+### 3 Setting Serializers,Views, URLs
 
 
 ### [Serializers](https://www.django-rest-framework.org/api-guide/serializers/)
@@ -172,5 +184,8 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 
 ```
 
+마찬가지로 
 
+[rest-framework-tutorial](https://www.django-rest-framework.org/tutorial/quickstart/)
 
+문서에 나와 있는데로 Views, Urls , Pagination, Settings도 처리합니다. 
